@@ -8,4 +8,7 @@ if %1==windows (
   
   echo --class-path src>>cpp.hxml
   echo --cpp ../bin/cpp/Server.exe
+  echo --main Main
+  
+  haxe cpp.hxml
 )
