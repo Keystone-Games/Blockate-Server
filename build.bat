@@ -2,6 +2,8 @@
 color 3
 
 if %1==nodejs (
+  haxelib install hxnodejs
+  
   md hxml
   cd hxml
   fsutil file createnew nodejs.hxml 0
