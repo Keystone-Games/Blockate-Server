@@ -1,0 +1,43 @@
+# editor files
+
+.vscode/
+.vs/
+.idea/
+.eclipse/
+
+# export folders
+
+out/
+export/
+cpp/
+jvm/
+java/
+neko/
+cs/
+build/
+compiled/
+bin/
+binaries/
+exports/
+
+# binaries
+
+*.exe
+*.dll
+*.ilk
+*.pdb
+*.jar
+*.java
+*.hl
+*.c
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.sh
+*.bin
+*.pyc
+*.pyo
+*.luac
+*.lub
+*.apk
