@@ -3,8 +3,28 @@ package;
 class Main {
   static function main() {
     #if !sys
-      return Sys.stderr().writeString("No file system available!\n");
+    return Sys.stderr().writeString("No file system available!\n");
     #end
+      
+    // Configure the server storage files
+      
+    var storageDir = "serverStorage";
+    var cp = Path.join(["C:\\", storageDir]);
+    var cf = Path.join([cp, "config.json"]);
+    
+    var defaultCF = {
+      
+      ip: "127.0.0.1",
+      port: 8000,
+      
+      serverName: "Example",
+      serverDesc: "This is the default configuration for the Blockate server."
+    
+    };
+    
+    if (!FileSystem.isDirectory(cp)) { FileSystem.createDirectory(cp); }
+    if (!FileSystem.exists(cf)) { File.saveContent(cf, JSON.stringify(defaultCF)); }
+    
     // Configure our HTTP server to respond with Hello World to all requests.
     var server = js.node.Http.createServer(function(request, response) {
       response.writeHead(200, {"Content-Type": "text/plain"});
