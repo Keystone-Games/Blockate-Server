@@ -2,6 +2,9 @@ package;
 
 class Main {
   static function main() {
+    #if !sys
+      return Sys.stderr().writeString("No file system available!\n");
+    #end
     // Configure our HTTP server to respond with Hello World to all requests.
     var server = js.node.Http.createServer(function(request, response) {
       response.writeHead(200, {"Content-Type": "text/plain"});
