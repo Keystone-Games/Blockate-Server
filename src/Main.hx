@@ -5,7 +5,12 @@ class Main {
     // Configure our HTTP server to respond with Hello World to all requests.
     var server = js.node.Http.createServer(function(request, response) {
       response.writeHead(200, {"Content-Type": "text/plain"});
-      response.end("Hello World\n");
+      // response.end("Hello World\n");
+      switch (request) {
+        case "worldInfo":
+          response.end("test");
+          break;
+      }
     });
 
     // Listen on port 8000, IP defaults to 127.0.0.1
