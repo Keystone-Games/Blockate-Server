@@ -49,17 +49,13 @@ class Main {
     var server = js.node.Http.createServer(function(request, response) {
       response.writeHead(200, {"Content-Type": "text/plain"});
       // response.end("Hello World\n");
-      switch (request) {
-        case "worldInfo":
-          response.end(wf);
-          break;
-      }
+      response.end(wf, cf);
     });
 
     // Listen on port 8000, IP defaults to 127.0.0.1
     server.listen(conf.port);
 
     // Put a console.log on the terminal
-    trace("Server running at 127.0.0.1:8000");
+    trace('Server running at ${conf.ip}:${conf.port}');
   }
 }
