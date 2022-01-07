@@ -6,6 +6,8 @@ class Main {
     return Sys.stderr().writeString("No file system available!\n");
     #end
       
+    trace("Starting Blockate Server 0.0.1!");
+      
     // Configure the server storage files
       
     var storageDir = "serverStorage";
